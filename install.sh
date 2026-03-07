@@ -1,8 +1,15 @@
 #!/bin/bash
 set -e  # Exit on error
+set -o pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_SUFFIX=".backup.$(date +%Y-%m-%d-%H%M%S)"
+
+check_dependency() {
+    if ! command -v "$1" &>/dev/null; then
+        echo "⚠️  $1 is not installed"
+    fi
+}
 
 # Function to safely create symlink with backup
 backup_and_link() {
@@ -31,6 +38,9 @@ backup_and_link() {
 echo "Installing dotfiles from $DOTFILES"
 echo ""
 
+check_dependency nvim
+check_dependency ghostty
+
 # Ensure ~/.config exists
 mkdir -p "$HOME/.config"
 
@@ -41,3 +51,5 @@ backup_and_link "$DOTFILES/.config/ghostty" "$HOME/.config/ghostty"
 
 echo ""
 echo "✨ Installation complete!"
+echo ""
+echo "Restart your terminal"
