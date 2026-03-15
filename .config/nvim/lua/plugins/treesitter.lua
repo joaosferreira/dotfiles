@@ -3,11 +3,15 @@ return {
   lazy = false,
   build = ":TSUpdate",
   config = function()
-    require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "bash", "toml" })
+    local languages = { "lua", "vim", "vimdoc", "bash", "toml" }
+
+    require("nvim-treesitter").install(languages)
 
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = "*",
-      callback = function() vim.treesitter.start() end,
+      pattern = languages,
+      callback = function()
+        vim.treesitter.start()
+      end,
     })
   end,
 }
