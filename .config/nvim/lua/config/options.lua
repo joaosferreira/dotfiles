@@ -33,7 +33,8 @@ opt.backup = false
 opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "lua",
+  pattern = { "lua", "javascript", "javascriptreact" },
+
   callback = function()
     vim.opt_local.tabstop = 2
     vim.opt_local.shiftwidth = 2

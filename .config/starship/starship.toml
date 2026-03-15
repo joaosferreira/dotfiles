@@ -6,6 +6,8 @@ $git_branch\
 $git_status\
 $character"""
 
+right_format = "$nodejs"
+
 add_newline = false
 
 [directory]
@@ -24,6 +26,9 @@ untracked = "?"
 modified = "~"
 staged = "+"
 deleted = "✘"
+
+[nodejs]
+format = "[$version ]($style)"
 
 [character]
 success_symbol = "[❯](green)"
