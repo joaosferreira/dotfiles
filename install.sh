@@ -41,6 +41,7 @@ echo ""
 check_dependency nvim
 check_dependency ghostty
 check_dependency starship
+check_dependency stylua
 
 # Ensure ~/.config exists
 mkdir -p "$HOME/.config"
