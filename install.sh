@@ -40,6 +40,7 @@ echo ""
 
 check_dependency nvim
 check_dependency ghostty
+check_dependency starship
 
 # Ensure ~/.config exists
 mkdir -p "$HOME/.config"
@@ -48,6 +49,7 @@ mkdir -p "$HOME/.config"
 backup_and_link "$DOTFILES/.zshrc" "$HOME/.zshrc"
 backup_and_link "$DOTFILES/.config/nvim" "$HOME/.config/nvim"
 backup_and_link "$DOTFILES/.config/ghostty" "$HOME/.config/ghostty"
+backup_and_link "$DOTFILES/.config/starship" "$HOME/.config/starship"
 
 echo ""
 echo "✨ Installation complete!"
