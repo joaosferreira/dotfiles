@@ -11,6 +11,12 @@ check_dependency() {
     fi
 }
 
+check_font() {
+    if [ ! -d "$HOME/Library/Fonts" ] || ! ls "$HOME/Library/Fonts" 2>/dev/null | grep -qi "$1"; then
+        echo "⚠️  $1 font is not installed"
+    fi
+}
+
 # Function to safely create symlink with backup
 backup_and_link() {
     local source="$1"
@@ -41,6 +47,9 @@ echo ""
 check_dependency git
 check_dependency nvim
 check_dependency ghostty
+check_dependency starship
+
+check_font "FiraCodeNerdFont"
 
 # Ensure ~/.config exists
 mkdir -p "$HOME/.config"
@@ -49,6 +58,7 @@ mkdir -p "$HOME/.config"
 backup_and_link "$DOTFILES/.zshrc" "$HOME/.zshrc"
 backup_and_link "$DOTFILES/.config/nvim" "$HOME/.config/nvim"
 backup_and_link "$DOTFILES/.config/ghostty" "$HOME/.config/ghostty"
+backup_and_link "$DOTFILES/.config/starship" "$HOME/.config/starship"
 
 echo ""
 echo "✨ Installation complete!"
