@@ -21,6 +21,7 @@ The install script creates symlinks for:
 - `~/.zshrc`
 - `~/.config/nvim/`
 - `~/.config/ghostty/`
+- `~/.config/starship/`
 
 Existing files are backed up in place.
 
