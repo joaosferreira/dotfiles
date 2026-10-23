@@ -1,3 +1,5 @@
+local telescope = require("telescope.builtin")
+
 vim.keymap.set({ "n", "v" }, " ", "<Nop>", { silent = true })
 
 -- Window navigation
@@ -16,4 +18,9 @@ vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file", silent = tr
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit window", silent = true })
 
 -- Search
+vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Find files", silent = true })
+vim.keymap.set("n", "<leader>fg", telescope.live_grep, { desc = "Live grep", silent = true })
+vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Find buffers", silent = true })
+vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Find help tags", silent = true })
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight", silent = true })

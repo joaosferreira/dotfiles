@@ -8,6 +8,7 @@ Minimal Lua-based Neovim setup with [lazy.nvim](https://github.com/folke/lazy.nv
 | --- | --- | --- |
 | Theme | tokyonight.nvim | Applies the Tokyo Night (Moon) colorscheme, matching the Ghostty theme. |
 | Syntax Highlighting | nvim-treesitter | Installs tree-sitter parsers and enables highlighting for supported languages. |
+| Fuzzy Finder | telescope.nvim | Finds files and searches their contents. |
 
 ## Layout
 

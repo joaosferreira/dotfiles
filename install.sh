@@ -48,6 +48,7 @@ check_dependency git
 check_dependency nvim
 check_dependency ghostty
 check_dependency starship
+check_dependency rg
 
 check_font "FiraCodeNerdFont"
 
