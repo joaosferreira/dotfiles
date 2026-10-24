@@ -33,5 +33,8 @@ opt.undofile = true
 opt.swapfile = false
 opt.backup = false
 
+-- Timing
+opt.updatetime = 300
+
 -- Clipboard
 opt.clipboard = "unnamedplus"

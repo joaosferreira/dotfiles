@@ -1,0 +1,5 @@
+{
+  "runtime.version": "LuaJIT",
+  "workspace.checkThirdParty": "Disable",
+  "workspace.library": ["${env:VIMRUNTIME}/lua"]
+}

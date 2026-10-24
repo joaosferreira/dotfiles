@@ -1,8 +1,12 @@
 # Neovim
 
-Minimal Lua-based Neovim setup with [lazy.nvim](https://github.com/folke/lazy.nvim).
+Lua-based Neovim configuration for terminal-based development.
 
 ## What's included
+
+### Plugins
+
+Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim).
 
 | Feature | Plugin | Description |
 | --- | --- | --- |
@@ -10,10 +14,18 @@ Minimal Lua-based Neovim setup with [lazy.nvim](https://github.com/folke/lazy.nv
 | Syntax Highlighting | nvim-treesitter | Installs tree-sitter parsers and enables highlighting for supported languages. |
 | Fuzzy Finder | telescope.nvim | Finds files and searches their contents. |
 
+### Language Servers
+
+Language servers are configured through Neovim's built-in `vim.lsp`.
+
+| Language | Server |
+| --- | --- |
+| Lua | `lua-language-server` (`lua_ls`) |
+
 ## Layout
 
 ```text
-.nvim/
+.config/nvim/
 ├── init.lua       Entry point
 ├── lazy-lock.json Pinned plugin versions
 └── lua/
