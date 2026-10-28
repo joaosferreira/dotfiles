@@ -24,3 +24,10 @@ vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Find buffers", si
 vim.keymap.set("n", "<leader>fh", telescope.help_tags, { desc = "Find help tags", silent = true })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight", silent = true })
+
+-- LSP
+vim.keymap.set("n", "gd", telescope.lsp_definitions, { desc = "Go to definition", silent = true })
+vim.keymap.set("n", "gr", telescope.lsp_references, { desc = "Find references", silent = true })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation", silent = true })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol", silent = true })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", silent = true })
