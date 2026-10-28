@@ -13,6 +13,7 @@ Plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim).
 | Theme | tokyonight.nvim | Applies the Tokyo Night (Moon) colorscheme, matching the Ghostty theme. |
 | Syntax Highlighting | nvim-treesitter | Installs tree-sitter parsers and enables highlighting for supported languages. |
 | Fuzzy Finder | telescope.nvim | Finds files and searches their contents. |
+| Formatting | conform.nvim | Formats supported filetypes on save. |
 
 ### Language Servers
 

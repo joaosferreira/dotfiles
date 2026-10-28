@@ -48,6 +48,7 @@ check_dependency git
 check_dependency nvim
 check_dependency ghostty
 check_dependency starship
+check_dependency stylua
 check_dependency lua-language-server
 check_dependency rg
 
