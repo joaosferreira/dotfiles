@@ -23,6 +23,7 @@ Language servers are configured through Neovim's built-in `vim.lsp`.
 | Language | Server |
 | --- | --- |
 | Lua | `lua-language-server` (`lua_ls`) |
+| Python | Pyright (`pyright`) |
 
 ## Layout
 

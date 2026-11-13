@@ -51,6 +51,8 @@ check_dependency starship
 check_dependency stylua
 check_dependency luacheck
 check_dependency lua-language-server
+check_dependency pyright-langserver
+check_dependency ruff
 check_dependency rg
 
 check_font "FiraCodeNerdFont"

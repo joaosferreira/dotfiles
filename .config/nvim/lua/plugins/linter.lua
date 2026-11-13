@@ -6,6 +6,7 @@ return {
 
     lint.linters_by_ft = {
       lua = { "luacheck" },
+      python = { "ruff" },
     }
 
     vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
